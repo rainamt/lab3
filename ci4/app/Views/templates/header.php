@@ -1,8 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>CodeIgniter Tutorial</title>
+    <title>A VERY NORMAL SITE</title>
 </head>
 <body>
 
-    <h1><?= esc($title) ?></h1>
