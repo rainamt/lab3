@@ -2,14 +2,20 @@
 <html lang= "en" >
   <meta charset="UTF-8">
   <link rel="stylesheet" href="index.css">
+
+
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="index.js" defer></script>
+
+
 <title> ꕥ a very normal site </title>
 </head>
 <body>
+
   
   <ul class="tabs">
     <li><a href="#home">Home</a></li>
@@ -17,9 +23,13 @@
         <li><a href="#contact">Links</a></li>
     
   </ul>
+
+
+
   <div id="home"class="home">
       
      
+
   <br>
   
   <div style = "position:relative; top: 160px; left: 70px; ">
@@ -40,9 +50,11 @@
       "Hello There, " + nickname + " !"; 
     }
   </script> 
+
   <p id="demo"></p></div>
     
       
+
 <script>
 let day;
 switch (new Date().getDay()) {
@@ -103,6 +115,7 @@ document.getElementById("demo").innerHTML = "Today is " + day;
       color:rgba(255, 191, 94, 0.98);
       background-color: #250b20;
       ">
+
           I like playing videos games whenever I have the time. 
         My favorite game is jensin impek.
         My favorite hobby is drawing and I draw stuffs for people. 
@@ -123,14 +136,17 @@ document.getElementById("demo").innerHTML = "Today is " + day;
 border-radius: 5px;
  
  width: 25%;
+
   font-family:'Helvetica';
   font-size: 20px;
 color:rgb(70, 29, 43, 0.98);
 background-color: #7A9e9f;"> <h1> DRAWINGS</h1> </div>
   
   
+
     
       
+
     <div style = "position:relative;  right: 620px; " >
       <a href="pic2.png"> <img src="pic2.png" width="230" height="260 "></a> 
     </div>
@@ -138,6 +154,7 @@ background-color: #7A9e9f;"> <h1> DRAWINGS</h1> </div>
       <a href="pic1.png"> <img src="pic1.png" width="230" height="260 "></a> 
       
     </div>
+
     <div style ="position:relative;  right: 850px; bottom:400px;
     z-index: 1;
       
@@ -171,6 +188,7 @@ background-color: #7A9e9f;"> <h1> DRAWINGS</h1> </div>
     </div>
   </div>
   <div style ="position:relative;  text-align:center; bottom:70px; left: 360px;
+
    
     
     width: 50%;
@@ -182,7 +200,10 @@ background-color: #7A9e9f;"> <h1> DRAWINGS</h1> </div>
      ">
      <a style="text-decoration: none; color:rgb(222, 230, 116);" href="complete_validation.php"> COMMISSION FORM</a></li>
 </div>
+
+
  
+
     <div id="contact" class="contact">
       <br><br><br><br><br> <br>
       <h1>CONTACTS</h1>
@@ -225,6 +246,7 @@ background-color: #7A9e9f;"> <h1> DRAWINGS</h1> </div>
       BUSINESS EMAIL: rterania@student.apc.edu.ph
       <p id="des"></p>
     </div>
+
     <script>
       const des = ["Facebook ","Instagram ", "& Email"];
       
@@ -249,12 +271,17 @@ background-color: #7A9e9f;"> <h1> DRAWINGS</h1> </div>
       font-size: 20px;
     color:rgb(61, 27, 116);
     background-color: #4bff63;"> 
+
     <a style="text-decoration: none" href="resource.php ">RESOURCES HERE!!</a>
       
+
       
+
      
       
       
   </div>
+
+
 </body>
 </html>
