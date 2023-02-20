@@ -5,9 +5,9 @@
 </head>
 <body>  
 <ul class="tabs">
-    <li><a href="index.php#home">Home</a></li>
-        <li><a href="index.php#Hobbies">Hobbies</a></li>
-        <li><a href="index.php#contact">Links</a></li>
+    <li><a href="indexweb.php#home">Home</a></li>
+        <li><a href="indexweb.php#Hobbies">Hobbies</a></li>
+        <li><a href="indexweb.php#contact">Links</a></li>
     
   </ul>
    <div style = "text-align: center;
