@@ -1,9 +1,7 @@
 <?php
 
 namespace App\Controllers;
-
 use App\Models\NewsModel;
-use CodeIgniter\Exceptions\PageNotFoundException;
 
 class News extends BaseController
 {
@@ -13,15 +11,16 @@ class News extends BaseController
 
         $data = [
             'news'  => $model->getNews(),
-            'title' => 'News Archive',
+            'title' => 'News archive',
         ];
 
         return view('templates/header', $data)
             . view('news/index')
             . view('templates/footer');
+    	
     }
-
-    public function view($slug = null)
+	
+	public function view($slug = null)
     {
         $model = model(NewsModel::class);
 
@@ -34,7 +33,7 @@ class News extends BaseController
         $data['title'] = $data['news']['title'];
 
         return view('templates/header', $data)
-            . view('news/view', )
+            . view('news/view')
             . view('templates/footer');
     }
 
@@ -75,4 +74,4 @@ class News extends BaseController
             . view('news/success')
             . view('templates/footer');
     }
-}
+}		
