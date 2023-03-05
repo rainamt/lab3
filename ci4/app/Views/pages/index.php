@@ -18,9 +18,9 @@
 
   
   <ul class="tabs">
-    <li><a href="#home">Home</a></li>
-        <li><a href="#Hobbies">Hobbies</a></li>
-        <li><a href="#contact">Links</a></li>
+    <li><a href="/~rterania/lab3/ci4/public/index#home">Home</a></li>
+        <li><a href="/~rterania/lab3/ci4/public/index#Hobbies">Hobbies</a></li>
+        <li><a href="/~rterania/lab3/ci4/public/index#contact">Links</a></li>
     
   </ul>
 
@@ -198,7 +198,7 @@ background-color: #7A9e9f;"> <h1> DRAWINGS</h1> </div>
    color:rgb(77, 50, 50);
    background-color: #103536;
      ">
-     <a style="text-decoration: none; color:rgb(222, 230, 116);" href="complete_validation.php"> COMMISSION FORM</a></li>
+     <a style="text-decoration: none; color:rgb(222, 230, 116);" href="/~rterania/lab3/ci4/public/complete_validation.php"> COMMISSION FORM</a></li>
 </div>
 
 
@@ -272,7 +272,9 @@ background-color: #7A9e9f;"> <h1> DRAWINGS</h1> </div>
     color:rgb(61, 27, 116);
     background-color: #4bff63;"> 
 
-    <a style="text-decoration: none" href="resource.php ">RESOURCES HERE!!</a>
+    <a style="text-decoration: none" href="/~rterania/lab3/ci4/public/resource.php">RESOURCES HERE!!</a>
+
+    <a style="text-decoration: none" href="/~rterania/lab3/ci4/public/create.php">CREATE NEWS</a>
       
 
       

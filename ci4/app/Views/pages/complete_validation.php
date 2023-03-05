@@ -5,9 +5,9 @@
 </head>
 <body>  
 <ul class="tabs">
-    <li><a href="index.php#home">Home</a></li>
-        <li><a href="index.php#Hobbies">Hobbies</a></li>
-        <li><a href="index.php#contact">Links</a></li>
+    <li><a href="/~rterania/lab3/ci4/public/index#contact">Home</a></li>
+        <li><a href="/~rterania/lab3/ci4/public/index#contact">Hobbies</a></li>
+        <li><a href="/~rterania/lab3/ci4/public/index#contact">Links</a></li>
     
   </ul>
    <div style = "text-align: center;
