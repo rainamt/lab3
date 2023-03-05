@@ -61,7 +61,7 @@
  
       
       
-      <a style = "text-decoration:none; color:rgb(46, 209, 141);" href="index.php"> BACK</a> 
+      <a style = "text-decoration:none; color:rgb(46, 209, 141);" href="/~rterania/lab3/ci4/public/index"> BACK</a> 
       
       
         </html>

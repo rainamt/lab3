@@ -198,7 +198,7 @@ background-color: #7A9e9f;"> <h1> DRAWINGS</h1> </div>
    color:rgb(77, 50, 50);
    background-color: #103536;
      ">
-     <a style="text-decoration: none; color:rgb(222, 230, 116);" href="/~rterania/lab3/ci4/public/complete_validation.php"> COMMISSION FORM</a></li>
+     <a style="text-decoration: none; color:rgb(222, 230, 116);" href="/~rterania/lab3/ci4/public/complete_validation"> COMMISSION FORM</a></li>
 </div>
 
 
@@ -273,8 +273,10 @@ background-color: #7A9e9f;"> <h1> DRAWINGS</h1> </div>
     background-color: #4bff63;"> 
 
     <a style="text-decoration: none" href="/~rterania/lab3/ci4/public/resource">RESOURCES HERE!!</a>
-
-    <a style="text-decoration: none" href="/~rterania/lab3/ci4/public/create">CREATE NEWS</a>
+<BR>
+    <a style="text-decoration: none" href="/~rterania/lab3/ci4/public/news/create">CREATE NEWS</a>
+      <BR>
+    <a style="text-decoration: none" href="/~rterania/lab3/ci4/public/news">NEWS</a>
       
 
       
