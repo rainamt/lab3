@@ -272,9 +272,9 @@ background-color: #7A9e9f;"> <h1> DRAWINGS</h1> </div>
     color:rgb(61, 27, 116);
     background-color: #4bff63;"> 
 
-    <a style="text-decoration: none" href="/~rterania/lab3/ci4/public/resource.php">RESOURCES HERE!!</a>
+    <a style="text-decoration: none" href="/~rterania/lab3/ci4/public/resource">RESOURCES HERE!!</a>
 
-    <a style="text-decoration: none" href="/~rterania/lab3/ci4/public/create.php">CREATE NEWS</a>
+    <a style="text-decoration: none" href="/~rterania/lab3/ci4/public/create">CREATE NEWS</a>
       
 
       
