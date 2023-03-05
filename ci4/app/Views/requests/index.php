@@ -11,7 +11,8 @@
     
   </ul>
    <div style = "text-align: center;
-    color:rgb(85, 19, 19);">
+    color:rgb(85, 19, 19);
+    ">
 <br><br><br><br>
 
 

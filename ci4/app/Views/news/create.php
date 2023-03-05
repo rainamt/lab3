@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>  
 <html>
 <head>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="/~rterania/lab3/ci4/public/index">
 </head>
 <body>  
 <ul class="tabs">
