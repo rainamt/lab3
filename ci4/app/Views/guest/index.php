@@ -1,25 +1,20 @@
-<h2><?= esc($title) ?></h2>
+<p>Can't find your name? <?= anchor("guests/create", "Register here!") ?></p>
+<?php if (!empty($guests) && is_array($guests)) : ?>
 
-<?php if (! empty($guest) && is_array($guest)): ?>
+  <?php foreach ($guests as $guest) : ?>
 
-    <?php foreach ($guest as $guest_item): ?>
+    <h2><?= esc($guest['name']) ?></h2>
 
-        <div class="main">
-		<br>
-		<b>
-		<table>
-		<tr>
-		<th>-----</th>
-		 <th><?= esc($guest_item['name']) ?> </th>
-         <th><?= esc($guest_item['email']) ?> </th>
-		 <th><?= esc($guest_item['comment']) ?> </th>
-		</tr>
-		</table>
-        </div>
-    <?php endforeach ?>
+    <p><?= esc($guest['comment']) ?></p>
 
-<?php else: ?>
-    <h3>No guest</h3>
-    <p>Unable to find any guest for you.</p>
+    <?= anchor("guests/" . esc($guest['id'], 'url'), "View guest details") ?>
+
+  <?php endforeach ?>
+  </ul>
+<?php else : ?>
+
+  <h2>No Guests</h2>
+
+  <p>Nobody has registered yet.</p>
 
 <?php endif ?>
