@@ -13,6 +13,8 @@
         <li><a href="/~rterania/lab3/ci4/public/index#contact">Links</a></li>
     
   </ul>
+
+
    <div style = "text-align: center;
     color:rgb(85, 19, 19);
     
@@ -23,6 +25,8 @@
 <?php if (! empty($guest) && is_array($guest)): ?>
 
     <?php foreach ($guest as $guest_item): ?>
+
+
 
         <div class="main">
 		<br>
@@ -47,12 +51,12 @@
 <?php endif ?>
 <div style = 
 " width: 30%;
-
+text-align: center;
 font-family:'Franklin Gothic Medium';
 font-size: 30px;
 color:rgb(77, 50, 50);
 background-color: #103536;">
 
-<a style="text-decoration: none; color:rgb(222, 230, 116);" href="guest/create" class="btn btn-primary">Register</a>
+<a style="text-decoration: none; color:rgb(222, 230, 116);" href="guest/create" class="btn btn-primary">'Request Form Now !!!'</a>
 </div>
 </div>

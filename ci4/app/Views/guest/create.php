@@ -31,25 +31,25 @@
 
     <label for="firstname">Name</label>
     <input type="input" name="firstname" value="<?= set_value('firstname') ?>">
-    <br>
+    <br><br><br><br><br>
 
     <label for="email">Email</label>
     <input type="input" name="email" value="<?= set_value('email') ?>">
-    <br>
+    <br><br><br><br><br>
 
     <label for="payment">Payment</label>
     <input type="input" name="payment" value="<?= set_value('payment') ?>">
-    <br>
+    <br><br><br><br><br>
 
     <label for="comment">Comment</label>
     <textarea name="comment" cols="45" rows="4"><?= set_value('comment') ?></textarea>
-    <br>
+    <br><br><br><br><br>
 
     <label for="style">Style</label>
     <input type="radio" name="style" <?php if (isset($style) && $style=="outline") echo "checked";?> value="outline">Outline
     <input type="radio" name="style" <?php if (isset($style) && $style=="color") echo "checked";?> value="color">Color
     <input type="radio" name="style" <?php if (isset($style) && $style=="fullyrendered") echo "checked";?> value="fullyrendered">Fully Rendered
-    <br>
+    <br><br><br><br><br>
 
     <input type="submit" name="submit" value="SUBMIT FORM">
 </form>

@@ -36,7 +36,7 @@ class Guest extends BaseController
 
         // Checks whether the submitted data passed the validation rules.
         if (! $this->validateData($post, [
-            'name' => 'required|max_length[255]|min_length[3]',
+            'firstname' => 'required|max_length[255]|min_length[3]',
             'email' => 'required|max_length[255]|min_length[3]',
             'payment' => 'required|max_length[255]|min_length[3]',			
             'comment'  => 'required|max_length[5000]|min_length[10]',
@@ -51,7 +51,7 @@ class Guest extends BaseController
         $model = model(GuestModel::class);
 
         $model->save([
-            'name' => $post['name'],
+            'firstname' => $post['name'],
             'email'  => $post['email'],
             'payment'  => $post['payment'],
             'comment'  => $post['comment'],
