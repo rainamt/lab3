@@ -19,7 +19,7 @@
     <input type="input" name="email" value="<?= set_value('email') ?>">
     <br>
 
-    <label for="website">Website</label>
+    <label for="website">Payment</label>
     <input type="input" name="website" value="<?= set_value('website') ?>">
     <br>
 
@@ -33,7 +33,7 @@
     <input type="radio" name="style" <?php if (isset($style) && $style=="fullyrendered") echo "checked";?> value="fullyrendered"> Fully Rendered
     <br>
 
-    <input class="primary-cta" type="submit" name="submit" value="Join the alliance">
+    <input class="primary-cta" type="submit" name="submit" value="REQUEST FORM">
     <br>
 </form>
 </div>
