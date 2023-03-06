@@ -8,7 +8,7 @@ class RequestModel extends Model
 {
     protected $table = 'rterania_request';
 
-    protected $allowedFields = ['firstname', 'lastname', 'email', 'payment', 'comment', 'style'];
+    protected $allowedFields = ['firstname', 'email', 'payment', 'comment', 'style'];
     
     public function getRequest() 
     {

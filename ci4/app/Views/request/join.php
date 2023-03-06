@@ -11,9 +11,7 @@
     <input type="input" name="firstname" value="<?= set_value('firstname') ?>">
     <br>
 
-    <label for="lastname">Last Name</label>
-    <input type="input" name="lastname" value="<?= set_value('lastname') ?>">
-    <br>
+    
 
     <label for="email">Email</label>
     <input type="input" name="email" value="<?= set_value('email') ?>">

@@ -5,7 +5,7 @@
 
     <?php foreach ($req as $req_item): ?>
         
-        <h3><?= esc($req_item['id']) ?> - <?= esc($req_item['firstname']) ?> <?= esc($req_item['lastname']) ?></h3>
+        <h3><?= esc($req_item['id']) ?> - <?= esc($req_item['firstname']) ?> </h3>
         <div class="main">
         <p>Payment: <?= esc($req_item['payment']) ?> <br>
         <p>Comment: <?= esc($req_item['comment']) ?> <br>
