@@ -35,8 +35,8 @@
 <form action="create" method="post">
     <?= csrf_field() ?>
 
-    <label for="fname"> Name</label>
-    <input type="input" name="fname" value="<?= set_value('fname') ?>">
+    <label for="firstname"> Name</label>
+    <input type="input" name="firstname" value="<?= set_value('firstname') ?>">
     <br>
 
 

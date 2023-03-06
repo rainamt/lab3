@@ -32,11 +32,11 @@ class Request extends BaseController
                 . view('templates/footer');
         }
 
-        $post = $this->request->getPost(['fname', 'email', 'payment', 'comment', 'style']);
+        $post = $this->request->getPost(['firstname', 'email', 'payment', 'comment', 'style']);
 
         // Checks whether the submitted data passed the validation rules.
         if (! $this->validateData($post, [
-            'fname' => 'required|max_length[255]|min_length[3]',
+            'firstname' => 'required|max_length[255]|min_length[3]',
             'email' => 'required|max_length[255]|min_length[3]',
             'payment' => 'required|max_length[255]|min_length[3]',	
             'comment' => 'required|max_length[255]|min_length[3]',		
@@ -51,7 +51,7 @@ class Request extends BaseController
         $model = model(RequestModel::class);
 
         $model->save([
-            'fname' => $post['fname'],
+            'firstname' => $post['firstname'],
             'email'  => $post['email'],
             'website'  => $post['website'],
             'comment'  => $post['comment'],

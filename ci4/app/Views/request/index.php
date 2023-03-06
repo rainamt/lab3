@@ -33,7 +33,7 @@
 
     <?php foreach ($request as $request_item): ?>
         
-        <h3> - <?= esc($request_item['fname']) ?> </h3>
+        <h3> - <?= esc($request_item['firstname']) ?> </h3>
         <div class="main">
         <p>Email: <?= esc($request_item['email']) ?> <br>
         <p>Website: <?= esc($request_item['website']) ?> <br>
