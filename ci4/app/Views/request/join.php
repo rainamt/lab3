@@ -20,7 +20,7 @@
     <br>
 
     <label for="website">Payment</label>
-    <input type="input" name="website" value="<?= set_value('website') ?>">
+    <input type="input" name="website" value="<?= set_value('payment') ?>">
     <br>
 
     <label for="comment">Comment</label>
@@ -33,7 +33,7 @@
     <input type="radio" name="style" <?php if (isset($style) && $style=="fullyrendered") echo "checked";?> value="fullyrendered"> Fully Rendered
     <br>
 
-    <input class="primary-cta" type="submit" name="submit" value="REQUEST FORM">
+    <input class="primary-cta" type="submit" name="submit" value="Submit">
     <br>
 </form>
 </div>
