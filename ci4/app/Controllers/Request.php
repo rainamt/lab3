@@ -7,13 +7,12 @@ use CodeIgniter\Exceptions\PageNotFoundException;
 
 class Request extends BaseController
 {
-    public function index()
-    {
+	@@ -10,24 +12,41 @@ public function index()
         $model = model(RequestModel::class);
 
         $data = [
-            'request'  => $model->getRequest(),
-            'title' => 'Request Form',
+            'request'  => $model->getrequest(),
+            'title' => 'Visitor Entries',
         ];
 
         return view('templates/header', $data)
@@ -28,7 +27,7 @@ class Request extends BaseController
         $data['request'] = $model->getRequest($slug);
 
         if (empty($data['request'])) {
-            throw new PageNotFoundException('Cannot find the Request entry: ' . $slug);
+            throw new PageNotFoundException('Cannot find the Request Form': ' . $slug);
         }
 
         $data['title'] = $data['request']['title'];
@@ -45,20 +44,19 @@ class Request extends BaseController
         // Checks whether the form is submitted.
         if (! $this->request->is('post')) {
             // The form is not submitted, so returns the form.
-            return view('templates/header', ['title' => 'Request Form'])
+            return view('templates/header', ['title' => 'Request Form''])
                 . view('request/create')
                 . view('templates/footer');
         }
 
-        $post = $this->request->getPost(['title', 'body']);
-
+	@@ -36,23 +55,24 @@ public function join()
         // Checks whether the submitted data passed the validation rules.
         if (! $this->validateData($post, [
-            'title' => 'required|max_length[255]|min_length[3]',
-            'body'  => 'required|max_length[5000]|min_length[10]',
+            'fname' => 'required|max_length[255]|min_length[3]',
+            'message'  => 'required|max_length[1000]|min_length[1]',
         ])) {
             // The validation fails, so returns the form.
-            return view('templates/header', ['title' => 'Request Form'])
+            return view('templates/header', ['title' => 'Request Form''])
                 . view('request/create')
                 . view('templates/footer');
         }
@@ -66,9 +64,9 @@ class Request extends BaseController
         $model = model(RequestModel::class);
 
         $model->save([
-            'title' => $post['title'],
-            'slug'  => url_title($post['title'], '-', true),
-            'body'  => $post['body'],
+            'fname' => $post['fname'],
+            'slug'  => url_title($post['fname'], '-', true),
+            'message'  => $post['message'],
         ]);
 
         return view('templates/header', ['title' => 'Request Form'])
