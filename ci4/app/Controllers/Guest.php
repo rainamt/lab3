@@ -2,18 +2,18 @@
 
 namespace App\Controllers;
 
-use App\Models\MessegeModel;
+use App\Models\GuestModel;
 use CodeIgniter\Exceptions\PageNotFoundException;
 
-class Messege extends BaseController
+class Guest extends BaseController
 {
     public function index()
     {
-        $model = model(MessegeModel::class);
+        $model = model(GuestModel::class);
 
         $data = [
-            'messege'  => $model->getGuest(),
-            'title' => 'Messege Entries',
+            'guest'  => $model->getGuest(),
+            'title' => 'Guest Entries',
         ];
 
         return view('templates/header', $data)
@@ -28,7 +28,7 @@ class Messege extends BaseController
         $data['guest'] = $model->getGuest($slug);
 
         if (empty($data['guest'])) {
-            throw new PageNotFoundException('Cannot find the Messege entry: ' . $slug);
+            throw new PageNotFoundException('Cannot find the Guest entry: ' . $slug);
         }
 
         $data['title'] = $data['guest']['title'];
@@ -58,7 +58,7 @@ class Messege extends BaseController
             'comment'  => 'required|max_length[1000]|min_length[1]',
         ])) {
             // The validation fails, so returns the form.
-            return view('templates/header', ['title' => 'Create a Messege entry'])
+            return view('templates/header', ['title' => 'Create a Guest entry'])
                 . view('guest/create')
                 . view('templates/footer');
         }
@@ -71,7 +71,7 @@ class Messege extends BaseController
             'comment'  => $post['comment'],
         ]);
 
-        return view('templates/header', ['title' => 'Create a Messege entry'])
+        return view('templates/header', ['title' => 'Create a Guest entry'])
             . view('guest/success')
             . view('templates/footer');
     }

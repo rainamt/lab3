@@ -33,11 +33,11 @@ $routes->get('/', 'Home::index');
 
 use App\Controllers\News;
 use App\Controllers\Pages;
-use App\Controllers\Messege;
+use App\Controllers\Guest;
 
-$routes->match(['get', 'post'], 'messege/create', [Messege::class, 'create']);
-$routes->get('messege/(:segment)', [Messege::class, 'view']);
-$routes->get('messege', [Messege::class, 'index']);
+$routes->match(['get', 'post'], 'guest/create', [Guest::class, 'create']);
+$routes->get('guest/(:segment)', [Guest::class, 'view']);
+$routes->get('guest', [Guest::class, 'index']);
 
 $routes->match(['get', 'post'], 'news/create', [News::class, 'create']);
 $routes->get('news/(:segment)', [News::class, 'view']);
