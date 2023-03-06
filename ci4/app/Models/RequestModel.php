@@ -4,14 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class RequestModel extends Model 
+class VisitorsModel extends Model
 {
-    protected $table = 'rterania_request';
+    protected $table = 'jbmolina_visitors';
+    protected $allowedFields = ['title', 'slug', 'body'];
 
-    protected $allowedFields = ['firstname', 'email', 'payment', 'comment', 'style'];
-    
-    public function getRequest() 
+ public function getVisitors($slug = false)
     {
-        return $this->findAll();
+        if ($slug === false) {
+            return $this->findAll();
+        }
+
+        return $this->where(['slug' => $slug])->first();
     }
 }
