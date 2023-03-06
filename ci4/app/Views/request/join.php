@@ -19,8 +19,8 @@
     <input type="input" name="email" value="<?= set_value('email') ?>">
     <br>
 
-    <label for="website">Payment</label>
-    <input type="input" name="website" value="<?= set_value('payment') ?>">
+    <label for="payment">Payment</label>
+    <input type="input" name="payment" value="<?= set_value('payment') ?>">
     <br>
 
     <label for="comment">Comment</label>
