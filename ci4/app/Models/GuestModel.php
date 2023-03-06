@@ -1,21 +1,19 @@
-
 <?php
 
 namespace App\Models;
 
 use CodeIgniter\Model;
 
-class GuestModel extends Model
+class GuestModel extends Model 
 {
     protected $table = 'rterania_request';
-    protected $allowedFields = ['firstname', 'comment'];
 
- public function getGuest($slug = false)
+    protected $allowedFields = ['firstname', 'email', 'payment', 'comment', 'style'];
+    
+    public function getGuest() 
     {
-        if ($slug === false) {
-            return $this->findAll();
-        }
 
-        return $this->where(['slug' => $slug])->first();
+
+        return $this->findAll();
     }
 }

@@ -20,9 +20,9 @@
     <?php foreach ($guest as $guest_item): ?>
 
         
-        <p><?= esc($guest_item['fname']) ?>
+        <p><?= esc($guest_item['firstname']) ?>
         <div class="main">
-        <p>Message: <?= esc($guest_item['message']) ?> <br><br>
+        <p>Message: <?= esc($guest_item['comment']) ?> <br><br>
 
     <?php endforeach ?>
 

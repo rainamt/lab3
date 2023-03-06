@@ -1,7 +1,8 @@
 <?php
+
 namespace App\Controllers;
+
 use App\Models\GuestModel;
-use CodeIgniter\Exceptions\PageNotFoundException;
 
 class Guest extends BaseController
 {
@@ -11,53 +12,39 @@ class Guest extends BaseController
 
         $data = [
             'guest'  => $model->getGuest(),
-            'title' => 'Guest Entries',
+            'title' => 'Request Form',
         ];
 
         return view('templates/header', $data)
             . view('guest/index')
             . view('templates/footer');
     }
-
-    public function view($slug = null)
-    {
-        $model = model(GuestModel::class);
-
-        $data['guest'] = $model->getGuest($slug);
-
-        if (empty($data['guest'])) {
-            throw new PageNotFoundException('Cannot find the Guest entry: ' . $slug);
-        }
-
-        $data['title'] = $data['guest']['title'];
-
-        return view('templates/header', $data)
-            . view('guest/view')
-            . view('templates/footer');
-    }
-
-    public function create()
+	
+	public function join()
     {
         helper('form');
 
         // Checks whether the form is submitted.
         if (! $this->request->is('post')) {
             // The form is not submitted, so returns the form.
-            return view('templates/header', ['title' => 'Create a guest entry'])
-                . view('guest/create')
+            return view('templates/header', ['title' => 'Request Form'])
+                . view('guest/join')   
                 . view('templates/footer');
         }
 
-        $post = $this->request->getPost(['firstname', 'comment']);
+        $post = $this->request->getPost(['firstname',  'email', 'payment', 'comment', 'style']);
 
         // Checks whether the submitted data passed the validation rules.
         if (! $this->validateData($post, [
             'firstname' => 'required|max_length[255]|min_length[3]',
-            'comment'  => 'required|max_length[1000]|min_length[1]',
+            'email' => 'required|max_length[255]|min_length[3]',
+            'payment' => 'required|max_length[255]|min_length[3]',	
+            'comment' => 'required|max_length[255]|min_length[3]',			
+            'style' => 'required|max_length[255]|min_length[3]',			
         ])) {
             // The validation fails, so returns the form.
-            return view('templates/header', ['title' => 'Create a Guest entry'])
-                . view('guest/create')
+            return view('templates/header', ['title' => 'Request Form'])
+                . view('guest/join')
                 . view('templates/footer');
         }
 
@@ -65,11 +52,13 @@ class Guest extends BaseController
 
         $model->save([
             'firstname' => $post['firstname'],
-            'slug'  => url_title($post['firstname'], '-', true),
+            'email'  => $post['email'],
+            'style'  => $post['style'],
             'comment'  => $post['comment'],
+            'gender'  => $post['gender'],
         ]);
 
-        return view('templates/header', ['title' => 'Create a Guest entry'])
+        return view('templates/header', ['title' => 'Request Form'])
             . view('guest/success')
             . view('templates/footer');
     }
