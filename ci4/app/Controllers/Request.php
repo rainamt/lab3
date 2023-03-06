@@ -12,7 +12,7 @@ class Request extends BaseController
 
         $data = [
             'request'  => $model->getRequest(),
-            'title' => 'Alliances',
+            'title' => 'Request',
         ];
 
         return view('templates/header', $data)
