@@ -33,8 +33,8 @@
 		<b>
 		<table>
 		<tr>
-		
-<br><br><br><br><br><br><br><br>
+		<th>                  </th>
+       <br><br>
         <th>Name:</th>
 		 <th><?= esc($guest_item['firstname']) ?> </th>
          <th>Email:</th>
