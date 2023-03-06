@@ -24,8 +24,10 @@
     
   </ul>
   <div style = "text-align: center;
-    color:rgb(85, 19, 19);">
-  </div>
+    color:rgb(85, 19, 19);
+    background-color: #FFC08B;
+    ">
+  
 <br><br><br><br><br><br><br><br><br><br><br>
 <h2><?= esc($request['firstname']) ?></h2>
 <p><?= esc($request['email']) ?></p>
@@ -33,7 +35,7 @@
 <p><?= esc($request['comment']) ?></p>
 <p><?= esc($request['style']) ?></p>
 
-
+</div>
 
 </body>
 </html>

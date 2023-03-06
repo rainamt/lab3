@@ -24,8 +24,10 @@
     
   </ul>
   <div style = "text-align: center;
-    color:rgb(85, 19, 19);">
-  </div>
+    color:rgb(85, 19, 19);
+    background-color: #FFC08B;
+    ">
+ 
 <br><br><br><br><br><br><br><br><br><br><br>
 <p>Request has been submitted.</p>
 <br><br><br><br>
@@ -33,6 +35,6 @@
 
 
 
-
+</div>
 </body>
 </html>
