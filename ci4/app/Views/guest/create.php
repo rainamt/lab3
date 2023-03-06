@@ -5,7 +5,7 @@
 </head>
 <body>  
 
-echo "<body style='background-color:pink'>";
+<body style='background-color:pink'>";
 
 <ul class="tabs">
 
