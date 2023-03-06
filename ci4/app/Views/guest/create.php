@@ -19,34 +19,35 @@
 <?= session()->getFlashdata('error') ?>
 <?= validation_list_errors() ?>
 
+<h2><?= esc($title) ?></h2>
+
+<?= session()->getFlashdata('error') ?>
+<?= validation_list_errors() ?>
+
 <form action="create" method="post">
     <?= csrf_field() ?>
 
-    <label for="firstname">First Name</label>
-    <input type="input" name="firstname" value="<?= set_value('firstname') ?>">
+    <label for="name">Name</label>
+    <input type="input" name="name" value="<?= set_value('name') ?>">
     <br>
-
 
     <label for="email">Email</label>
     <input type="input" name="email" value="<?= set_value('email') ?>">
     <br>
 
-    <label for="payment">Payment</label>
-    <input type="input" name="payment" value="<?= set_value('payment') ?>">
+    <label for="website">Website</label>
+    <input type="input" name="website" value="<?= set_value('website') ?>">
     <br>
 
     <label for="comment">Comment</label>
     <textarea name="comment" cols="45" rows="4"><?= set_value('comment') ?></textarea>
     <br>
 
-    <label for="style">Style</label>
-    <input type="radio" name="style" <?php if (isset($style) && $gender=="outline") echo "checked";?> value="outline">Outline
-    <input type="radio" name="style" <?php if (isset($style) && $gender=="color") echo "checked";?> value="color">Color
-    <input type="radio" name="style" <?php if (isset($style) && $gender=="fullyrender") echo "checked";?> value="fullyrender">Fully Rendered
+    <label for="gender">Gender</label>
+    <input type="input" name="gender" value="<?= set_value('gender') ?>">
     <br>
 
-    <input class="primary-cta" type="submit" name="submit" value="Request Form">
-    <br>
+    <input type="submit" name="submit" value="Create guest entry">
 </form>
 </div>
 </div>

@@ -19,19 +19,26 @@
 
     <?php foreach ($guest as $guest_item): ?>
 
-        
-        <p><?= esc($guest_item['firstname']) ?>
         <div class="main">
-        <p>Message: <?= esc($guest_item['comment']) ?> <br><br>
-
+		<br>
+		<b>
+		<table>
+		<tr>
+		<th>-----</th>
+		 <th><?= esc($guest_item['name']) ?> </th>
+         <th><?= esc($guest_item['email']) ?> </th>
+		 <th><?= esc($guest_item['comment']) ?> </th>
+		</tr>
+		</table>
+        </div>
     <?php endforeach ?>
 
 <?php else: ?>
+    <h3>No guest</h3>
+    <p>Unable to find any guest for you.</p>
 
-    <h3>No Guest</h3>
+<?php endif ?>
 
-    <p>No one was here ;-;.</p>
-
-<?php endif ?> 
+<a href="guest/create" class="btn btn-primary">Register</a>
 
 </div>
