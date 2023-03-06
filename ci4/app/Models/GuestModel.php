@@ -4,14 +4,14 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class RequestModel extends Model
+class GuestModel extends Model
 {
     protected $table = 'rterania_request';
 
     protected $allowedFields = ['name', 'email', 'payment', 'comment', 'style'];
 
 	
-	 public function getRequest()
+	 public function getGuest()
     {     
         return $this->findAll();
     }

@@ -2,21 +2,21 @@
 
 namespace App\Controllers;
 
-use App\Models\RequestModel;
+use App\Models\GuestModel;
 
-class Request extends BaseController
+class Guest extends BaseController
 {
     public function index()
     {
-        $model = model(RequestModel::class);
+        $model = model(GuestModel::class);
 
 		$data = [
-            'request'  => $model->getRequest(),
-            'title' => 'Requestbook',
+            'guest'  => $model->getGuest(),
+            'title' => 'Guestbook',
         ];
 
         return view('templates/header', $data)
-             . view('request/index')
+             . view('guest/index')
              . view('templates/footer');
     }
 	
@@ -27,8 +27,8 @@ class Request extends BaseController
         // Checks whether the form is submitted.
         if (! $this->request->is('post')) {
             // The form is not submitted, so returns the form.
-            return view('templates/header', ['title' => 'Create a request entry'])
-                . view('request/create')
+            return view('templates/header', ['title' => 'Create a guest entry'])
+                . view('guest/create')
                 . view('templates/footer');
         }
 
@@ -43,12 +43,12 @@ class Request extends BaseController
             'style' => 'required|max_length[255]|min_length[3]',			
         ])) {
             // The validation fails, so returns the form.
-            return view('templates/header', ['title' => 'Add a request entry'])
-                . view('request/create')
+            return view('templates/header', ['title' => 'Add a guest entry'])
+                . view('guest/create')
                 . view('templates/footer');
         }
 
-        $model = model(RequestModel::class);
+        $model = model(GuestModel::class);
 
         $model->save([
             'name' => $post['name'],
@@ -58,8 +58,8 @@ class Request extends BaseController
             'style'  => $post['style'],
         ]);
 
-        return view('templates/header', ['title' => 'Add a request Entry'])
-            . view('request/success')
+        return view('templates/header', ['title' => 'Add a Guest Entry'])
+            . view('guest/success')
             . view('templates/footer');
     }
 }	
