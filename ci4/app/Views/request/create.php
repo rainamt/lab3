@@ -19,27 +19,13 @@
 <form action="create" method="post">
     <?= csrf_field() ?>
 
-    Name: <input type="text" name="name" value="<?php echo $name;?>">
-  <span class="error">* <?php echo $nameErr;?></span>
-  <br><br>
-  E-mail: <input type="text" name="email" value="<?php echo $email;?>">
-  <span class="error">* <?php echo $emailErr;?></span>
-  <br><br>
-  Payment Form: <input type="text" name="payment" value="<?php echo $payment;?>">
-  <span class="error"><?php echo $paymentErr;?></span>
-  <br><br>
-  Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
-  <br><br>
-  Style:
-  <input type="radio" name="style" <?php if (isset($style) && $style=="Outline") echo "checked";?> value="Outline">Outline
-  <input type="radio" name="style" <?php if (isset($style) && $style=="Color") echo "checked";?> value="Color">Color
-  <input type="radio" name="style" <?php if (isset($style) && $style=="Fully Rendered") echo "checked";?> value="Fully Rendered">Fully Rendered  
-  <span class="error">* <?php echo $styleErr;?></span>
-  <br><br>
-  <input type="submit" name="submit" value="Submit">  
+    <label for="title">Name</label>
+    <input type="input" name="title" value="<?= set_value('title') ?>">
+    <br>
 
+    <label for="body">Message</label>
+    <textarea name="body" cols="45" rows="4"><?= set_value('body') ?></textarea>
+    <br>
 
-    
-
-    <input type="submit" name="submit" value="Submit">
+    <input type="submit" name="submit" value="Create entry">
 </form>
