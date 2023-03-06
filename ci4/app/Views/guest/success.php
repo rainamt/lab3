@@ -20,5 +20,5 @@
     "> 
     
 
-    <p>Guest entry created successfully.</p>
+    <p>Request Entry created successfully.</p>
 </div>
