@@ -27,7 +27,7 @@ class Request extends BaseController
         // Checks whether the form is submitted.
         if (! $this->request->is('post')) {
             // The form is not submitted, so returns the form.
-            return view('templates/header', ['title' => 'Join the alliance'])
+            return view('templates/header', ['title' => 'REQUEST FORM'])
                 . view('request/join')   
                 . view('templates/footer');
         }
