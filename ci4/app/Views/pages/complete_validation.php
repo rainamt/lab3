@@ -110,9 +110,9 @@ echo $style;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-$servername = "localhost";
+$servername = "192.168.150.213";
 $username = "webprogmi212";
-$password = "webprogmi212";
+$password = "b3ntRhino98";
 $dbname = "webprogmi212";
 
 // Create connection
@@ -122,7 +122,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO request (firstname, email, payment, comment, style)
+$sql = "INSERT INTO rterania_request (firstname, email, payment, comment, style)
 VALUES ('$name', '$email', '$payment', '$comment', '$style' )";
 
 if ($conn->query($sql) === TRUE) {
