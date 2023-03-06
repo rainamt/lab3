@@ -62,3 +62,5 @@ $routes->get('(:segment)', [Pages::class, 'view']);
  */
 if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
+
+}
