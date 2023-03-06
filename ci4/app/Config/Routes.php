@@ -32,7 +32,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 
 use App\Controllers\News;
-
+use App\Controllers\Request;
 
 
 use App\Controllers\Pages;
@@ -43,6 +43,9 @@ $routes->get('news', [News::class, 'index']);
 $routes->get('pages', [Pages::class, 'index']);
 $routes->get('(:segment)', [Pages::class, 'view']);
 
+$routes->match(['get', 'post'], 'request/join', [Request::class, 'join']);
+$routes->get('request/(:segment)', [Request::class, 'view']);
+$routes->get('Request', [Request::class, 'index']);
 
 
 /*

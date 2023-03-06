@@ -198,7 +198,21 @@ background-color: #7A9e9f;"> <h1> DRAWINGS</h1> </div>
    color:rgb(77, 50, 50);
    background-color: #103536;
      ">
-     <a style="text-decoration: none; color:rgb(222, 230, 116);" href="/~rterania/lab3/ci4/public/complete_validation"> COMMISSION FORM</a></li>
+     <a style="text-decoration: none; color:rgb(222, 230, 116);" href="/~rterania/lab3/ci4/public/request/index"> COMMISSION FORM</a></li>
+</div>
+
+<div style ="position:relative;  text-align:center; bottom:50px; left: 360px;
+
+   
+    
+width: 50%;
+
+ font-family:'Franklin Gothic Medium';
+ font-size: 50px;
+color:rgb(77, 50, 50);
+background-color: #103536;
+ ">
+ <a style="text-decoration: none; color:rgb(222, 230, 116);" href="/~rterania/lab3/ci4/public/request/join"> FORMS SUBMITTED</a></li>
 </div>
 
 
