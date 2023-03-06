@@ -7,6 +7,23 @@ use App\Models\RequestModel;
 class Request extends BaseController
 {
 
+   
+
+
+    public function index()
+    {
+        $model = model(RequestModel::class);
+
+        $data = [
+            'request'  => $model->getRequest(),
+            'title' => 'Request',
+        ];
+
+        return view('templates/header', $data)
+            . view('request/index')
+            . view('templates/footer');
+    }
+
     public function view($slug = null)
     {
         $model = model(RequestModel::class);
@@ -21,21 +38,6 @@ class Request extends BaseController
 
         return view('templates/header', $data)
             . view('request/view')
-            . view('templates/footer');
-    }
-
-
-    public function index()
-    {
-        $model = model(RequestModel::class);
-
-        $data = [
-            'request'  => $model->getRequest(),
-            'title' => 'Request',
-        ];
-
-        return view('templates/header', $data)
-            . view('request/index')
             . view('templates/footer');
     }
 	
