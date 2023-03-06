@@ -50,8 +50,11 @@ $routes->match(['get', 'post'], 'request/create', [Request::class, 'create']);
 $routes->get('request', [Request::class, 'index']);
 
 //request routes
-$routes->match(['get', 'post'], 'request/create', [Request::class, 'create']);
-$routes->get('guest', [Request::class, 'index']);
+$routes->match(['get', 'post'], 'request/create', [News::class, 'create']);
+$routes->get('request/(:segment)', [Request::class, 'view']);
+$routes->get('request', [Request::class, 'index']);
+$routes->get('pages', [Pages::class, 'index']);
+$routes->get('(:segment)', [Pages::class, 'view']);
 
 
 
