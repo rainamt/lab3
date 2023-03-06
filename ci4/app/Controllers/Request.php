@@ -6,6 +6,25 @@ use App\Models\RequestModel;
 
 class Request extends BaseController
 {
+
+    public function view($slug = null)
+    {
+        $model = model(RequestModel::class);
+
+        $data['request'] = $model->Request($slug);
+
+        if (empty($data['request'])) {
+            throw new PageNotFoundException('Cannot find the request entry: ' . $slug);
+        }
+
+        $data['title'] = $data['request']['title'];
+
+        return view('templates/header', $data)
+            . view('request/view')
+            . view('templates/footer');
+    }
+
+
     public function index()
     {
         $model = model(RequestModel::class);
@@ -43,7 +62,7 @@ class Request extends BaseController
             'style' => 'required|max_length[255]|min_length[3]',			
         ])) {
             // The validation fails, so returns the form.
-            return view('templates/header', ['title' => 'Request Form'])
+            return view('templates/header', ['title' => 'REQUEST FORM'])
                 . view('request/join')
                 . view('templates/footer');
         }
