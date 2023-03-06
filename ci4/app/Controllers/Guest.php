@@ -32,7 +32,7 @@ class Guest extends BaseController
                 . view('templates/footer');
         }
 
-        $post = $this->request->getPost(['name', 'email', 'payment', 'comment', 'style']);
+        $post = $this->request->getPost(['firstname', 'email', 'payment', 'comment', 'style']);
 
         // Checks whether the submitted data passed the validation rules.
         if (! $this->validateData($post, [
@@ -51,7 +51,7 @@ class Guest extends BaseController
         $model = model(GuestModel::class);
 
         $model->save([
-            'firstname' => $post['name'],
+            'firstname' => $post['firstname'],
             'email'  => $post['email'],
             'payment'  => $post['payment'],
             'comment'  => $post['comment'],

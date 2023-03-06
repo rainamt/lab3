@@ -8,7 +8,7 @@ class GuestModel extends Model
 {
     protected $table = 'rterania_request';
 
-    protected $allowedFields = ['name', 'email', 'payment', 'comment', 'style'];
+    protected $allowedFields = ['firstname', 'email', 'payment', 'comment', 'style'];
 
 	
 	 public function getGuest()
