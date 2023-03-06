@@ -19,6 +19,24 @@ class Request extends BaseController
              . view('request/index')
              . view('templates/footer');
     }
+
+
+    public function view($slug = null)
+    {
+        $model = model(RequestModel::class);
+
+        $data['request'] = $model->getRequest($slug);
+
+        if (empty($data['request'])) {
+            throw new PageNotFoundException('NO REQUEST ENTRY: ' . $slug);
+        }
+
+        $data['title'] = $data['request']['title'];
+
+        return view('templates/header', $data)
+            . view('request/view')
+            . view('templates/footer');
+    }
 	
 	public function create()
     {
@@ -32,11 +50,11 @@ class Request extends BaseController
                 . view('templates/footer');
         }
 
-        $post = $this->request->getPost(['name', 'email', 'payment', 'comment', 'style']);
+        $post = $this->request->getPost(['fname', 'email', 'payment', 'comment', 'style']);
 
         // Checks whether the submitted data passed the validation rules.
         if (! $this->validateData($post, [
-            'name' => 'required|max_length[255]|min_length[3]',
+            'fname' => 'required|max_length[255]|min_length[3]',
             'email' => 'required|max_length[255]|min_length[3]',
             'payment' => 'required|max_length[255]|min_length[3]',			
             'comment'  => 'required|max_length[5000]|min_length[10]',
@@ -51,7 +69,7 @@ class Request extends BaseController
         $model = model(RequestModel::class);
 
         $model->save([
-            'name' => $post['name'],
+            'fname' => $post['fname'],
             'email'  => $post['email'],
             'payment'  => $post['payment'],
             'comment'  => $post['comment'],
