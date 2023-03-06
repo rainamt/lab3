@@ -10,9 +10,13 @@ class RequestModel extends Model
 
     protected $allowedFields = ['firstname', 'email', 'payment', 'comment', 'style' ];
     
-    public function getRequest() 
-    {
-        return $this->findAll();
+    public function getRequest($slug = false) 
+    { 
+        if ($slug === false) {
+            return $this->findAll();
+
+        }
+        return $this->where(['slug' => $slug])->first();
     }
 
 }
