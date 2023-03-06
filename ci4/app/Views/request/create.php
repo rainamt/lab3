@@ -23,9 +23,11 @@
         <li><a href="/~rterania/lab3/ci4/public/index#contact">Links</a></li>
     
   </ul>
-
+  <div style = "text-align: center;
+    color:rgb(85, 19, 19);">
   </div>
 <br><br><br><br><br><br><br><br><br><br><br>
+
 <div class="wrapper">
 <h2><?= esc($title) ?></h2>
 
