@@ -25,7 +25,7 @@
 		<table>
 		<tr>
 		<th>-----</th>
-		 <th><?= esc($guest_item['name']) ?> </th>
+		 <th><?= esc($guest_item['firstname']) ?> </th>
          <th><?= esc($guest_item['email']) ?> </th>
 		 <th><?= esc($guest_item['comment']) ?> </th>
 		</tr>

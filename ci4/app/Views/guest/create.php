@@ -14,12 +14,7 @@
     color:rgb(85, 19, 19);"> 
     
     <div class="wrapper">
-<h2><?= esc($title) ?></h2>
 
-<?= session()->getFlashdata('error') ?>
-<?= validation_list_errors() ?>
-
-<h2><?= esc($title) ?></h2>
 
 <?= session()->getFlashdata('error') ?>
 <?= validation_list_errors() ?>
@@ -35,16 +30,18 @@
     <input type="input" name="email" value="<?= set_value('email') ?>">
     <br>
 
-    <label for="website">Website</label>
-    <input type="input" name="website" value="<?= set_value('website') ?>">
+    <label for="payment">Payment</label>
+    <input type="input" name="payment" value="<?= set_value('payment') ?>">
     <br>
 
     <label for="comment">Comment</label>
     <textarea name="comment" cols="45" rows="4"><?= set_value('comment') ?></textarea>
     <br>
 
-    <label for="gender">Gender</label>
-    <input type="input" name="gender" value="<?= set_value('gender') ?>">
+    <label for="style">Style</label>
+    <input type="radio" name="style" <?php if (isset($style) && $style=="outline") echo "checked";?> value="outline">Outline
+    <input type="radio" name="style" <?php if (isset($style) && $style=="color") echo "checked";?> value="color">Color
+    <input type="radio" name="style" <?php if (isset($style) && $style=="fullyrendered") echo "checked";?> value="fullyrendered">Fully Rendered
     <br>
 
     <input type="submit" name="submit" value="Create guest entry">
