@@ -48,6 +48,11 @@
     <input type="input" name="website" value="<?= set_value('website') ?>">
     <br>
 
+    
+    <label for="payment">Payment</label>
+    <input type="input" name="payment" value="<?= set_value('payment') ?>">
+    <br>
+
     <label for="comment">Comment</label>
     <textarea name="comment" cols="45" rows="4"><?= set_value('comment') ?></textarea>
     <br>
