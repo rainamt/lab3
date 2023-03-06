@@ -26,8 +26,11 @@
 
   </div>
 <br><br><br><br><br><br><br><br><br><br><br>
-<h2><?= esc($request['title']) ?></h2>
-<p><?= esc($request['body']) ?></p>
+<h2><?= esc($request['firstname']) ?></h2>
+<p><?= esc($request['email']) ?></p>
+<p><?= esc($request['payment']) ?></p>
+<p><?= esc($request['comment']) ?></p>
+<p><?= esc($request['style']) ?></p>
 
 
 

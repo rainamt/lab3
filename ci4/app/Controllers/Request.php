@@ -22,18 +22,18 @@ class Request extends BaseController
 
     public function view($slug = null)
     {
-        $model = model(VisitorsModel::class);
+        $model = model(RequestModel::class);
 
-        $data['visitors'] = $model->getVisitors($slug);
+        $data['request'] = $model->getRequest($slug);
 
-        if (empty($data['visitors'])) {
-            throw new PageNotFoundException('Cannot find the visitors entry: ' . $slug);
+        if (empty($data['request'])) {
+            throw new PageNotFoundException('No Form Entry: ' . $slug);
         }
 
-        $data['title'] = $data['visitors']['title'];
+        $data['title'] = $data['request']['title'];
 
         return view('templates/header', $data)
-            . view('visitors/view')
+            . view('request/view')
             . view('templates/footer');
     }
 	
