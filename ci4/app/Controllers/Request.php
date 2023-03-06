@@ -17,7 +17,7 @@ class Request extends BaseController
         ];
 
         return view('templates/header', $data)
-            . view('visitors/index')
+            . view('request/index')
             . view('templates/footer');
     }
 
@@ -25,9 +25,9 @@ class Request extends BaseController
     {
         $model = model(RequestModel::class);
 
-        $data['visitors'] = $model->getRequest($slug);
+        $data['request'] = $model->getRequest($slug);
 
-        if (empty($data['visitors'])) {
+        if (empty($data['request'])) {
             throw new PageNotFoundException('Cannot find the Request entry: ' . $slug);
         }
 
