@@ -48,19 +48,15 @@
     <input type="input" name="payment" value="<?= set_value('payment') ?>">
     <br>
 
-    
-    <label for="payment">Payment</label>
-    <input type="input" name="payment" value="<?= set_value('payment') ?>">
-    <br>
 
     <label for="comment">Comment</label>
     <textarea name="comment" cols="45" rows="4"><?= set_value('comment') ?></textarea>
     <br>
 
     <label for="style">Style</label>
-    <input type="radio" name="style" <?php if (isset($gender) && $gender=="outline") echo "checked";?> value="outline">Outline
-    <input type="radio" name="style" <?php if (isset($gender) && $gender=="color") echo "checked";?> value="color">Color
-    <input type="radio" name="style" <?php if (isset($gender) && $gender=="fullyrendered") echo "checked";?> value="fullyrendered">Fully Rendered
+    <input type="radio" name="style" <?php if (isset($style) && $style=="outline") echo "checked";?> value="outline">Outline
+    <input type="radio" name="style" <?php if (isset($style) && $style=="color") echo "checked";?> value="color">Color
+    <input type="radio" name="style" <?php if (isset($style) && $style=="fullyrendered") echo "checked";?> value="fullyrendered">Fully Rendered
     <br>
 
     <input class="primary-cta" type="submit" name="submit" value="SUBMIT">

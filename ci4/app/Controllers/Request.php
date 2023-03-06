@@ -30,7 +30,7 @@ class Request extends BaseController
             throw new PageNotFoundException('No Entry: ' . $slug);
         }
 
-       
+        $data['title'] = $data['request']['title'];
 
         return view('templates/header', $data)
             . view('request/view')
