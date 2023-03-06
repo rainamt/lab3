@@ -33,11 +33,17 @@
 		<b>
 		<table>
 		<tr>
-		<th>-----</th>
+		
+<br><br><br><br><br><br><br><br>
+        <th>Name:</th>
 		 <th><?= esc($guest_item['firstname']) ?> </th>
+         <th>Email:</th>
          <th><?= esc($guest_item['email']) ?> </th>
+         <th>Payment:</th>
 		 <th><?= esc($guest_item['payment']) ?> </th>
+         <th>Comment:</th>
          <th><?= esc($guest_item['comment']) ?> </th>
+         <th>Style:</th>
          <th><?= esc($guest_item['style']) ?> </th>
 		</tr>
 		</table>
@@ -50,16 +56,18 @@
 
 <?php endif ?>
 
-<br><br><br><br><br><br>
+<br><br><br><br>
 
 <div style = 
-" width: 30%;
+" 
+position:relative;  left: 360px;
+width: 30%;
 text-align: center;
 font-family:'Franklin Gothic Medium';
 font-size: 30px;
 color:rgb(77, 50, 50);
 background-color: #103536;">
 
-<a style="text-decoration: none; color:rgb(222, 230, 116);" href="guest/create" class="btn btn-primary">'Request Form Now !!!'</a>
+<a style="text-decoration: none; color:rgb(222, 230, 116);" href="guest/create" class="btn btn-primary">Request Form now</a>
 </div>
 </div>
