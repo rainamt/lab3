@@ -1,10 +1,19 @@
+<!DOCTYPE HTML>  
+<html>
+<head>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>  
+<ul class="tabs">
+    <li><a href="index.php#home">Home</a></li>
+        <li><a href="index.php#Hobbies">Hobbies</a></li>
+        <li><a href="index.php#contact">Links</a></li>
+    
+  </ul>
+   <div style = "text-align: center;
+    color:rgb(85, 19, 19);"> 
+    
 
-<h2><?= esc($guests['name']) ?></h2>
-<h3>Email</h3>
-<p><?= mailto(esc($guests['email'])) ?></p>
-<h3>Payment</h3>
-<p><?= auto_link($guests['payment'], 'url') ?></p>
-<h3>Comment</h3>
-<p><?= esc($guests['comment']) ?></p>
-<h3>Style</h3>
-<p><?= ucfirst(esc($guests['style'])) ?></p>
+    <h2><?= esc($guest['fname']) ?></h2>
+<p><?= esc($guest['message']) ?></p>
+</div>
