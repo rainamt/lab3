@@ -26,6 +26,7 @@
 
   </div>
 <br><br><br><br><br><br><br><br><br><br><br>
+<div class="wrapper">
 <h2><?= esc($title) ?></h2>
 
 <?= session()->getFlashdata('error') ?>
@@ -34,17 +35,33 @@
 <form action="create" method="post">
     <?= csrf_field() ?>
 
-    <label for="title">Name</label>
-    <input type="input" name="title" value="<?= set_value('title') ?>">
+    <label for="fname"> Name</label>
+    <input type="input" name="fname" value="<?= set_value('fname') ?>">
     <br>
 
-    <label for="body">Message</label>
-    <textarea name="body" cols="45" rows="4"><?= set_value('body') ?></textarea>
+
+    <label for="email">Email</label>
+    <input type="input" name="email" value="<?= set_value('email') ?>">
     <br>
 
-    <input type="submit" name="submit" value="Create entry">
+    <label for="website">Website</label>
+    <input type="input" name="website" value="<?= set_value('website') ?>">
+    <br>
+
+    <label for="comment">Comment</label>
+    <textarea name="comment" cols="45" rows="4"><?= set_value('comment') ?></textarea>
+    <br>
+
+    <label for="style">Style</label>
+    <input type="radio" name="style" <?php if (isset($gender) && $gender=="outline") echo "checked";?> value="outline">Outline
+    <input type="radio" name="style" <?php if (isset($gender) && $gender=="color") echo "checked";?> value="color">Color
+    <input type="radio" name="style" <?php if (isset($gender) && $gender=="fullyrendered") echo "checked";?> value="fullyrendered">Fully Rendered
+    <br>
+
+    <input class="primary-cta" type="submit" name="submit" value="SUBMIT">
+    <br>
 </form>
-
+</div>
 
 
 

@@ -26,29 +26,31 @@
 
   </div>
 <br><br><br><br><br><br><br><br><br><br><br>
+<div class="wrapper">
 <h2><?= esc($title) ?></h2>
 
 <?php if (! empty($request) && is_array($request)): ?>
 
     <?php foreach ($request as $request_item): ?>
-
-        <h3><?= esc($request_item['title']) ?></h3>
-
+        
+        <h3> - <?= esc($request_item['fname']) ?> </h3>
         <div class="main">
-            <?= esc($request_item['body']) ?>
+        <p>Email: <?= esc($request_item['email']) ?> <br>
+        <p>Website: <?= esc($request_item['website']) ?> <br>
+        <p>Style: <?= esc($request_item['style']) ?> <br>
         </div>
-        <p><a href="news/<?= esc($request_item['slug'], 'url') ?>">View article</a></p>
+        
 
     <?php endforeach ?>
 
 <?php else: ?>
 
-    <h3>No Forms in Line</h3>
+    <h3>NO FORMS HAS SUBMITTED</h3>
 
-    <p>Try to request forms now !! </p>
+    <p>TRY TO REQUEST FORMS NOW!!</p>
 
-<?php endif ?> 
-
+<?php endif ?>
+</div>
 
 </body>
 </html>
