@@ -201,7 +201,7 @@ background-color: #7A9e9f;"> <h1> DRAWINGS</h1> </div>
      <a style="text-decoration: none; color:rgb(222, 230, 116);" href="/~rterania/lab3/ci4/public/guest/create"> COMMISSION FORM</a></li>
 </div>
 
-<div style ="position:relative;  text-align:center; bottom:50px; left: 600px;
+<div style ="position:relative;  text-align:center; bottom:50px; left: 550px;
 
    
     
