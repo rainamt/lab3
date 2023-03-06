@@ -70,7 +70,7 @@ class Request extends BaseController
         $model->save([
             'firstname' => $post['firstname'],
             'email'  => $post['email'],
-            'website'  => $post['website'],
+            'payment'  => $post['payment'],
             'comment'  => $post['comment'],
             'style'  => $post['style'],
         ]);
