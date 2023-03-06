@@ -12,7 +12,7 @@ class Request extends BaseController
 
         $data = [
             'request'  => $model->getRequest(),
-            'title' => 'Request',
+            'title' => 'Request Form',
         ];
 
         return view('templates/header', $data)
