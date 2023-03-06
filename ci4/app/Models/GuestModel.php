@@ -10,10 +10,12 @@ class GuestModel extends Model
 
     protected $allowedFields = ['firstname', 'email', 'payment', 'comment', 'style'];
     
-    public function getGuest() 
+    public function getGuest($slug = false) 
     {
 
-
-        return $this->findAll();
+        if ($slug === false) {
+            return $this->findAll();
+        }
+        return $this->findAll(['slug' => $slug])->first();
     }
 }
