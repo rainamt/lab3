@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers;
-
+use CodeIgniter\Exceptions\PageNotFoundException;
 use App\Models\RequestModel;
 
 class Request extends BaseController
@@ -27,7 +27,7 @@ class Request extends BaseController
         $data['request'] = $model->getRequest($slug);
 
         if (empty($data['request'])) {
-            throw new PageNotFoundException('No Form Entry: ' . $slug);
+            throw new PageNotFoundException('No Entry: ' . $slug);
         }
 
         $data['title'] = $data['request']['title'];
