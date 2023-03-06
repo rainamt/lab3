@@ -205,10 +205,10 @@ background-color: #7A9e9f;"> <h1> DRAWINGS</h1> </div>
 
    
     
-width: 50%;
+width: 30%;
 
  font-family:'Franklin Gothic Medium';
- font-size: 50px;
+ font-size: 30px;
 color:rgb(77, 50, 50);
 background-color: #103536;
  ">

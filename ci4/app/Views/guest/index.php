@@ -4,20 +4,18 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>  
-<style>
 
-background-color: #92a8d1;
-</style>
 
 <ul class="tabs">
-    <li><a href="index.php#home">Home</a></li>
-        <li><a href="index.php#Hobbies">Hobbies</a></li>
-        <li><a href="index.php#contact">Links</a></li>
+
+<li><a href="/~rterania/lab3/ci4/public/index#home">Home</a></li>
+        <li><a href="/~rterania/lab3/ci4/public/index#Hobbies">Hobbies</a></li>
+        <li><a href="/~rterania/lab3/ci4/public/index#contact">Links</a></li>
     
   </ul>
    <div style = "text-align: center;
     color:rgb(85, 19, 19);
-    background-color: #92a8d1;
+    
     "> 
     
     <h2><?= esc($title) ?></h2>
@@ -47,7 +45,14 @@ background-color: #92a8d1;
     <p>Unable to find any guest for you.</p>
 
 <?php endif ?>
+<div style = 
+" width: 30%;
 
-<a href="guest/create" class="btn btn-primary">Register</a>
+font-family:'Franklin Gothic Medium';
+font-size: 30px;
+color:rgb(77, 50, 50);
+background-color: #103536;">
 
+<a style="text-decoration: none; color:rgb(222, 230, 116);" href="guest/create" class="btn btn-primary">Register</a>
+</div>
 </div>
