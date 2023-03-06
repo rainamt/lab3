@@ -198,7 +198,7 @@ background-color: #7A9e9f;"> <h1> DRAWINGS</h1> </div>
    color:rgb(77, 50, 50);
    background-color: #103536;
      ">
-     <a style="text-decoration: none; color:rgb(222, 230, 116);" href="/~rterania/lab3/ci4/public/request/create"> COMMISSION FORM</a></li>
+     <a style="text-decoration: none; color:rgb(222, 230, 116);" href="/~rterania/lab3/ci4/public/guest/create"> COMMISSION FORM</a></li>
 </div>
 
 <div style ="position:relative;  text-align:center; bottom:50px; left: 360px;
@@ -212,7 +212,7 @@ width: 50%;
 color:rgb(77, 50, 50);
 background-color: #103536;
  ">
- <a style="text-decoration: none; color:rgb(222, 230, 116);" href="/~rterania/lab3/ci4/public/request/index"> FORMS SUBMITTED</a></li>
+ <a style="text-decoration: none; color:rgb(222, 230, 116);" href="/~rterania/lab3/ci4/public/guest"> FORMS SUBMITTED</a></li>
 </div>
 
 

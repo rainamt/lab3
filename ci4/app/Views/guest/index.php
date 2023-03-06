@@ -4,6 +4,11 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>  
+<style>
+
+background-color: #92a8d1;
+</style>
+
 <ul class="tabs">
     <li><a href="index.php#home">Home</a></li>
         <li><a href="index.php#Hobbies">Hobbies</a></li>
@@ -11,7 +16,9 @@
     
   </ul>
    <div style = "text-align: center;
-    color:rgb(85, 19, 19);"> 
+    color:rgb(85, 19, 19);
+    background-color: #92a8d1;
+    "> 
     
     <h2><?= esc($title) ?></h2>
 
@@ -27,7 +34,9 @@
 		<th>-----</th>
 		 <th><?= esc($guest_item['firstname']) ?> </th>
          <th><?= esc($guest_item['email']) ?> </th>
-		 <th><?= esc($guest_item['comment']) ?> </th>
+		 <th><?= esc($guest_item['payment']) ?> </th>
+         <th><?= esc($guest_item['comment']) ?> </th>
+         <th><?= esc($guest_item['style']) ?> </th>
 		</tr>
 		</table>
         </div>
