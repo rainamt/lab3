@@ -14,3 +14,5 @@ class RequestModel extends Model
     {
         return $this->findAll();
     }
+
+}
