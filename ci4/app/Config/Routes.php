@@ -48,6 +48,9 @@ $routes->get('(:segment)', [Pages::class, 'view']);
 $routes->match(['get', 'post'], 'request/create', [Request::class, 'create']);
 $routes->get('request/(:segment)', [Request::class, 'view']);
 $routes->get('request', [Request::class, 'index']);
+$routes->get('(:segment)', [Request::class, 'view']);
+
+
 
 
 /*
