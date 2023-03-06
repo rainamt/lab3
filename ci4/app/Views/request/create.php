@@ -24,7 +24,10 @@
     
   </ul>
   <div style = "text-align: center;
-    color:rgb(85, 19, 19);">
+    color:rgb(85, 19, 19);
+
+    background-image: url("BG.svg");
+    " >
   
 <br><br><br><br><br><br><br><br><br><br><br>
 
