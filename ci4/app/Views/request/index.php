@@ -36,7 +36,7 @@
         <h3> - <?= esc($request_item['firstname']) ?> </h3>
         <div class="main">
         <p>Email: <?= esc($request_item['email']) ?> <br>
-        <p>Website: <?= esc($request_item['website']) ?> <br>
+        <p>Payment: <?= esc($request_item['payment']) ?> <br>
         <p>Style: <?= esc($request_item['style']) ?> <br>
         </div>
         
