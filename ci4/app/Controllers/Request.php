@@ -19,6 +19,23 @@ class Request extends BaseController
             . view('request/index')
             . view('templates/footer');
     }
+
+    public function view($slug = null)
+    {
+        $model = model(VisitorsModel::class);
+
+        $data['visitors'] = $model->getVisitors($slug);
+
+        if (empty($data['visitors'])) {
+            throw new PageNotFoundException('Cannot find the visitors entry: ' . $slug);
+        }
+
+        $data['title'] = $data['visitors']['title'];
+
+        return view('templates/header', $data)
+            . view('visitors/view')
+            . view('templates/footer');
+    }
 	
 	public function create()
     {
